@@ -22,16 +22,6 @@
    --action-button-second-background: #188ce8;
 
    --border-color: #eeeeee;
-
-   /* ========= Приклад від ментора ==================== */
-   /* --main-dark-color: #212121;
-   --main-light-color: #ffffff;
-   --main-text-color: #757575;
-   --accent-color: #2196f3;
-   --accent-secondary-color: ; */
-}
-ul {
-   list-style: none;
 }
 
 body {
@@ -40,8 +30,42 @@ body {
    background-color: var(--base-background);
 }
 
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+.container {
+   width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+   /* outline: 1px solid tomato; */
+}
+
 /* Секція "header" */
 .logo {
+   margin-right: 93px;
+
    font-family: "Raleway", sans-serif;
    font-weight: 700;
    font-size: 26px;
@@ -55,6 +79,10 @@ body {
 }
 .nav-link,
 .contact-link {
+   display: block;
+   padding-top: 32px;
+   padding-bottom: 32px;
+
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
@@ -62,7 +90,6 @@ body {
 }
 .contact-link {
    color: var(--main-second-color);
-   text-decoration: none;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -73,21 +100,45 @@ body {
 .current {
    color: var(--action-color);
 }
+.container-flex {
+   display: flex;
+   align-items: center;
+}
+.nav {
+   display: flex;
+   align-items: center;
+}
+.nav-list {
+   display: flex;
+}
+.contact-list {
+   display: flex;
+   margin-left: auto;
+}
+.nav-item:not(:last-child),
+.contact-item:not(:last-child) {
+   margin-right: 50px;
+}
 
 /* Секція "hero" */
 .hero {
    background-color: var(--hero-background);
+   text-align: center;
+   padding: 200px 0px;
 }
 .hero-caption {
+   margin-bottom: 30px;
+
    font-weight: 900;
    font-size: 44px;
    line-height: 1.36;
-   text-align: center;
    letter-spacing: 0.06em;
    text-transform: uppercase;
    color: var(--main-third-color);
 }
 .hero-btn {
+   padding: 10px 32px;
+   border: none;
    font-family: inherit;
    font-weight: 700;
    font-size: 16px;
@@ -109,6 +160,7 @@ body {
 }
 
 /* Секція "feature", Особливості */
+
 /* .visually-hidden прибирає заголовок h2 - "Особливості" */
 .visually-hidden {
    position: absolute;
@@ -122,7 +174,18 @@ body {
    clip-path: inset(50%);
    margin: -1px;
 }
-
+.features {
+   padding: 94px 0px;
+}
+.features-list {
+   display: flex;
+}
+.features-item {
+   width: calc((100%-90px) / 4);
+}
+.features-item:not(:last-child) {
+   margin-right: 30px;
+}
 .features-title {
    font-weight: 700;
    font-size: 14px;
@@ -139,28 +202,50 @@ body {
 }
 
 /* Секція "product. Чим ми займаємося*/
+.product {
+   padding-bottom: 94px;
+}
 .product-caption {
+   margin-bottom: 50px;
+
    font-weight: 700;
    font-size: 36px;
    line-height: 1.17;
    text-align: center;
    letter-spacing: 0.03em;
 }
-
+.product-list {
+   display: flex;
+}
+.product-item:not(:last-child) {
+   margin-right: 30px;
+}
 /* Секція "team", Наша команда */
 .team {
+   padding: 94px 0px;
+
    background-color: var(--team-background);
 }
 .team-caption {
+   margin-bottom: 50px;
+
    font-weight: 700;
    font-size: 36px;
    line-height: 1.17;
    text-align: center;
    letter-spacing: 0.03em;
 }
+.team-list {
+   display: flex;
+   justify-content: space-between;
+}
 .team-item {
    background-color: var(--base-background);
+
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 0px 0px 4px 4px;
 }
+
 .team-title,
 .team-subtitle {
    font-weight: 500;
@@ -169,6 +254,14 @@ body {
    text-align: center;
    letter-spacing: 0.03em;
 }
+.team-img {
+}
+
+.team-title {
+}
+.team-title-subtitle {
+   padding: 30px 0px;
+}
 .team-subtitle {
    font-weight: 400;
    color: var(--main-second-color);
@@ -176,9 +269,15 @@ body {
 
 /* Секція "footer" */
 .footer {
+   padding: 60px 0px;
+
    background-color: var(--footer-background);
 }
-.logo .logo-footer {
+.logo-bottom {
+   display: block;
+   margin-bottom: 20px;
+}
+.logo-footer {
    color: var(--logo-third-color);
 }
 .address-link {
@@ -199,8 +298,27 @@ body {
 }
 
 /* ----------------   Сторінка " Портфоліо (2-га сторінка)   ----------- "  */
+.header-portfolio {
+   border-bottom: 1px solid #ececec;
+}
+
+.projects {
+   padding-top: 108px;
+   padding-bottom: 80px;
+}
 /* фільтер */
+.filter-list {
+   display: flex;
+   justify-content: center;
+
+   margin-bottom: 50px;
+}
+.filter-item:not(:last-child) {
+   margin-right: 8px;
+}
 .filter-btn {
+   padding: 6px 22px;
+
    font-family: inherit;
    font-weight: 500;
    font-size: 16px;
@@ -211,6 +329,10 @@ body {
 
    background-color: var(--button-background);
    border-radius: 4px;
+   border: none;
+}
+.filter-btn.first {
+   padding: 6px 25px;
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -220,9 +342,25 @@ body {
    border-radius: 4px;
 }
 /* Список проектів */
+.projects-list {
+   display: flex;
+   flex-wrap: wrap;
+}
 .projects-item {
-   background: var();
-   border: 1px solid var(--border-color);
+   background: var(--base-background);
+}
+.projects-item:not(:nth-child(3n)) {
+   margin-right: 30px;
+}
+.projects-item:not(:nth-last-child(-n + 3)) {
+   margin-bottom: 30px;
+}
+.projects-title-subtitle {
+   padding: 20px 24px;
+
+   border-right: 1px solid var(--border-color);
+   border-bottom: 1px solid var(--border-color);
+   border-left: 1px solid var(--border-color);
 }
 .projects-title {
    font-weight: 700;
@@ -237,3 +375,5 @@ body {
    letter-spacing: 0.03em;
    color: var(--main-second-color);
 }
+
+/* ------------Д.з. № 3---------- */
