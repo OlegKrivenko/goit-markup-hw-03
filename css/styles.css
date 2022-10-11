@@ -275,6 +275,7 @@ img {
 }
 .logo-bottom {
    display: block;
+   margin-right: 0px;
    margin-bottom: 20px;
 }
 .logo-footer {
